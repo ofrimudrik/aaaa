@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>אופס! משהו השתבש</title>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Heebo', sans-serif;
+      background-color: #FAF4E4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      direction: rtl;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    img {
+      max-width: 250px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #f48b29;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Heebo', sans-serif;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d36b00;
+    }
+  </style>
+</head>
+<body>
+  <img src="i-love-u.png" alt="Oops!">
+
+
+  <h1>היי :)</h1>
+  <p>נראה שנכנסתם לדף שלא קיים.</p>
+  <p>יש מצב שזה קישור שאמרתי לעצמי לטפל בו "אחר כך"... ואז שכחתי 🙈</p>
+  <p>אני בניתי את האתר, אז תזרמו איתי 😅</p>
+  <p>בואו נחזור לדף הבית ונשכח שזה קרה 💛</p>
+
+  <button onclick="window.location.href='index.html'">חזרה לדף הבית 🏡</button>
+</body>
+</html>

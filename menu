@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תפריטים</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=M+PLUS+1p&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fredoka', 'M PLUS 1p', sans-serif;
+            background-color: #FAF4E4;
+            text-align: center;
+            padding: 20px;
+            direction: rtl;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        .menu-buttons button, .back-button {
+            background-color: #257180;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .menu-buttons button:hover, .back-button:hover {
+            background-color: #1b5a63;
+        }
+        .menu-section {
+            display: none;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .home-icon {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #257180;
+            color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .home-icon:hover {
+            background-color: #1b5a63;
+        }
+        #barPopup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.6);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        #barPopup img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 10px;
+        }
+        #barPopup span {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            background: rgba(0,0,0,0.5);
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="home-icon" title="חזרה לדף הבית">⌂</a>
+    <div class="container">
+        <h2>בחרו תפריט</h2>
+        <div class="menu-buttons">
+            <button onclick="showMenu('food')">תפריט אוכל</button>
+            <button onclick="showMenu('bar')">תפריט בר</button>
+        </div>
+        <div id="food" class="menu-section">
+            <iframe src="https://drive.google.com/file/d/1OhofUFItRaBQy2cXsICnomKGL1Qt85Jz/preview" allow="autoplay"></iframe>
+        </div>
+        <div id="bar" class="menu-section">
+            <iframe src="https://drive.google.com/file/d/1Fc-YiK3E53zJHeG3BSQdCxjPW6cirtKY/preview" allow="autoplay"></iframe>
+        </div>
+    </div>
+
+    <!-- פופאפ -->
+    <div id="barPopup">
+        <div style="position: relative;">
+            <img src="bar_popup.jpg" alt="פופאפ בר">
+            <span onclick="closeBarPopup()">✖</span>
+        </div>
+    </div>
+
+    <script>
+        function showMenu(type) {
+            document.querySelectorAll('.menu-section').forEach(el => el.style.display = 'none');
+            document.getElementById(type).style.display = 'block';
+
+            if (type === 'bar') {
+                document.getElementById("barPopup").style.display = "flex";
+            }
+        }
+
+        function closeBarPopup() {
+            document.getElementById("barPopup").style.display = "none";
+        }
+    </script>
+</body>
+</html>
